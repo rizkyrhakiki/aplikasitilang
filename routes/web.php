@@ -17,8 +17,11 @@
 
 Auth::routes();
 Route::middleware('auth')->group(function () {
-    Route::get('/', function () {
+    Route::get('/admin', function () {
         return view('home');
     });
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/admin', 'HomeController@index')->name('home');
+});
+Route::get('/', function () {
+    return view('beranda');
 });
