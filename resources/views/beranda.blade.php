@@ -37,74 +37,77 @@
 {{--               focus:bg-white focus:text-yellow-400">Tentang</a>--}}
                 </div>
             </div>
-            <div class="p-5 flex-wrap flex">
+            <div class="px-5 pb-5 flex-wrap flex">
                 <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
                     <a href="">
-                        <img class="w-full block" src="https://tailwindcss.com/img/card-top.jpg"
+                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
                              alt="Sunset in the mountains">
                         <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
+                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
                             <p class="text-gray-700 text-base">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
                                 Maiores et perferendis eaque, exercitationem praesentium nihil.
                             </p>
                         </div>
+                    </a>
+                </div>
+                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
+                    <a href="">
+                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
+                             alt="Sunset in the mountains">
                         <div class="px-6 py-4">
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
+                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
+                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
+                            <p class="text-gray-700 text-base">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                Maiores et perferendis eaque, exercitationem praesentium nihil.
+                            </p>
                         </div>
                     </a>
                 </div>
                 <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <img class="w-full block" src="https://tailwindcss.com/img/card-top.jpg"
-                         alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 py-4">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-                    </div>
+                    <a href="">
+                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
+                             alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
+                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
+                            <p class="text-gray-700 text-base">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                Maiores et perferendis eaque, exercitationem praesentium nihil.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <img class="w-full block" src="https://tailwindcss.com/img/card-top.jpg"
-                         alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 py-4">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-                    </div>
+                    <a href="">
+                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
+                             alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
+                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
+                            <p class="text-gray-700 text-base">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                Maiores et perferendis eaque, exercitationem praesentium nihil.
+                            </p>
+                        </div>
+                    </a>
                 </div>
                 <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <img class="w-full block" src="https://tailwindcss.com/img/card-top.jpg"
-                         alt="Sunset in the mountains">
-                    <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
-                        <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                            et perferendis eaque, exercitationem praesentium nihil.
-                        </p>
-                    </div>
-                    <div class="px-6 py-4">
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#photography</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#travel</span>
-                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#winter</span>
-                    </div>
+                    <a href="">
+                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
+                             alt="Sunset in the mountains">
+                        <div class="px-6 py-4">
+                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
+                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
+                            <p class="text-gray-700 text-base">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
+                                Maiores et perferendis eaque, exercitationem praesentium nihil.
+                            </p>
+                        </div>
+                    </a>
                 </div>
-            </div>
 
         </div>
     </div>
