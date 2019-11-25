@@ -29,7 +29,7 @@
     <!-- Fonts and Styles -->
     @yield('css_before')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700">
-    <link rel="stylesheet" id="css-main" href="{{ mix('/css/codebase.css') }}">
+    <link rel="stylesheet" id="css-main" href="{{ asset('/css/codebase.css') }}">
     <link rel="stylesheet" id="css-main" href="{{ asset('/css/style.css') }}">
 
 
@@ -207,10 +207,10 @@
     <script src=""{{asset('js/jquery.js')}}></script>
 
     <!-- Codebase Core JS -->
-    <script src="{{ mix('js/codebase.app.js') }}"></script>
+    <script src="{{ asset('js/codebase.app.js') }}"></script>
 
     <!-- Laravel Scaffolding JS -->
-    <script src="{{ mix('js/laravel.app.js') }}"></script>
+    <script src="{{ asset('js/laravel.app.js') }}"></script>
     <!-- Page JS Code -->
     <script src="{{ asset('js/pages/db_classic.min.js')}}"></script>
 
