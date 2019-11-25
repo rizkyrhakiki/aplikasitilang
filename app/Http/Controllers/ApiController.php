@@ -11,7 +11,7 @@ class ApiController extends Controller
     {
         $client = new Client();
 
-        $response = $client->request('GET','https://peaceful-tor-50926.herokuapp.com/public/dataInfoTilang');
+        $response = $client->request('GET','https://aplikasitilang.herokuapp.com/public/dataInfoTilang');
         $responseBody = $response->getBody()->getContents();
 
         $apiResponse = json_decode($responseBody, true);
