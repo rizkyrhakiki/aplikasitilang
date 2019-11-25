@@ -59,26 +59,21 @@
 <!-- Lokasi Field -->
 <div class="form-group row col-sm-48">
     {!! Form::label('lokasi', 'Lokasi:',  ['class' => 'form-label col-lg-48']) !!}
-    {!! Form::text('lokasi', null, ['class' => 'form-control col-lg-48']) !!}
+    {!! Form::text('lokasi', old('lokasi'), ['class' => 'form-control col-lg-48', 'id' => 'searchmap']) !!}
 </div>
-<div class="form-group row col-sm-48">
+<div class="form-group">
+    <div id="input-map" class="mt-3"></div>
+</div>
+<div class="form-group row col-sm-48 hidden">
     {!! Form::label('lat', 'Lat:',  ['class' => 'form-label col-lg-48']) !!}
     {!! Form::text('lat', null, ['class' => 'form-control col-lg-48']) !!}
 </div>
-<div class="form-group row col-sm-48">
+<div class="form-group row col-sm-48 hidden">
     {!! Form::label('lng', 'Lng:',  ['class' => 'form-label col-lg-48']) !!}
     {!! Form::text('lng', null, ['class' => 'form-control col-lg-48']) !!}
 </div>
 
-<div class="form-group">
-    <label for="formGroupExampleInput">Lokasi Map</label>
-    <div class="input-group-prepend">
-        <span class="input-group-text no-border-right"><i class="fas fa-map-marked-alt"></i></span>
-        <input name="lokasi" type="text" class="form-control no-border-left" id="searchmap"
-               placeholder="Lokasi pada map" value="{{old('lokasi')}}" required>
-    </div>
-    <div id="input-map" class="mt-3"></div>
-</div>
+
 
 <!-- Keterangan Field -->
 <div class="form-group row col-sm-48">
