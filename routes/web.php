@@ -22,7 +22,6 @@ Route::middleware('auth')->group(function () {
         return view('home');
     });
 //    Route::get('/admin', 'HomeController@index');
-    Route::resource('informasiTilangs', 'InformasiTilangController');
 });
-
+Route::resource('informasiTilangs', 'InformasiTilangController');
 Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');
