@@ -11,6 +11,7 @@
             </div>
         </div>
         <div class="mt-10 mx-auto max-w-5xl h-75 rounded items-center overflow-hidden border">
+
             <div class="w-full container justify-between flex">
                 <div class="w-2/4 flex items-center flex-shrink-0 text-black mr-24 p-5 ml-2">
                    <h5 class="py-2"><strong>Informasi Jadwal Tilang</strong></h5>
@@ -38,77 +39,24 @@
                 </div>
             </div>
             <div class="px-5 pb-5 flex-wrap flex">
-                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <a href="">
-                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
-                             alt="Sunset in the mountains">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
-                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <a href="">
-                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
-                             alt="Sunset in the mountains">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
-                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <a href="">
-                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
-                             alt="Sunset in the mountains">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
-                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <a href="">
-                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
-                             alt="Sunset in the mountains">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
-                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                    <a href="">
-                        <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
-                             alt="Sunset in the mountains">
-                        <div class="px-6 py-4">
-                            <div class="font-bold text-xl mb-2">Judul Kegiatan</div>
-                            <p class="text-accent text-sm mb-3">20-22 Desember 2019</p>
-                            <p class="text-gray-700 text-base">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla!
-                                Maiores et perferendis eaque, exercitationem praesentium nihil.
-                            </p>
-                        </div>
-                    </a>
-                </div>
+                @foreach($apiResponse['result'] as $informasiTilang)
+                    <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
+                        <a href="">
+                            <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
+                                 alt="Sunset in the mountains">
+                            <div class="px-6 py-4">
+                                <div class="font-bold text-xl mb-2">{{$informasiTilang -> nama}}</div>
+                                <p class="text-accent text-sm mb-3">{{$informasiTilang -> tanggal_mulai}} - {{$informasiTilang -> tanggal_selseai}}</p>
+                                <p class="text-gray-700 text-base">
+                                    {{$informasiTilang -> keterangan}}
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
 
+
+</div>
         </div>
     </div>
 

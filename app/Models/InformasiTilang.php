@@ -35,6 +35,8 @@ class InformasiTilang extends Model
         'tanggal_mulai',
         'tanggal_selesai',
         'lokasi',
+        'lat',
+        'lng',
         'keterangan'
     ];
 
@@ -50,6 +52,8 @@ class InformasiTilang extends Model
         'tanggal_mulai' => 'date',
         'tanggal_selesai' => 'date',
         'lokasi' => 'string',
+        'lat' => 'string',
+        'lng' => 'string',
         'keterangan' => 'string'
     ];
 

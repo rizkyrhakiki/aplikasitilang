@@ -37,6 +37,14 @@ class InformasiTilangController extends AppBaseController
             ->with('informasiTilangs', $informasiTilangs);
     }
 
+    public function dataInfoTilang()
+    {
+        $informasiTilangs = $this->informasiTilangRepository->all();
+        $dataTilang['title'] = 'Infromasi Jadwal Tilang';
+        $dataTilang['result'] = $informasiTilangs;
+        return response()->json($dataTilang);
+    }
+
     /**
      * Show the form for creating a new InformasiTilang.
      *

@@ -11,6 +11,7 @@
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Icons -->
+
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon.png') }}">
     <link rel="icon" sizes="192x192" ><div class="content-header-section">
         <button type="button" class="btn btn-secondary btn-noborder">
@@ -29,10 +30,14 @@
     @yield('css_before')
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,400i,600,700">
     <link rel="stylesheet" id="css-main" href="{{ mix('/css/codebase.css') }}">
+    <link rel="stylesheet" id="css-main" href="{{ asset('/css/style.css') }}">
+
 
     <!-- You can include a specific file from public/css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="{{ mix('/css/themes/corporate.css') }}"> -->
     @yield('css_after')
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeM7wY1YRzynn4DNyFk1RhhBfpsihr3nM&libraries=places"
+            type="text/javascript"></script>
 </head>
 <body>
     <div id="page-container" class="sidebar-o sidebar-inverse enable-page-overlay side-scroll page-header-fixed">
@@ -199,6 +204,7 @@
     </div>
     <!-- END Page Container -->
 
+    <script src=""{{asset('js/jquery.js')}}></script>
 
     <!-- Codebase Core JS -->
     <script src="{{ mix('js/codebase.app.js') }}"></script>
@@ -207,6 +213,8 @@
     <script src="{{ mix('js/laravel.app.js') }}"></script>
     <!-- Page JS Code -->
     <script src="{{ asset('js/pages/db_classic.min.js')}}"></script>
+
+    <script src="{{ asset('js/maps.js') }}"></script>
 
     @yield('js_after')
 </body>

@@ -20,10 +20,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin', function () {
         return view('home');
     });
-    Route::get('/admin', 'HomeController@index')->name('home');
+    Route::get('/admin', 'HomeController@index');
     Route::resource('informasiTilangs', 'InformasiTilangController');
 });
-Route::get('/', function () {
-    return view('beranda');
-});
+Route::get('/', 'HomeController@index');
 
+Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');

@@ -20,6 +20,8 @@ class CreateInformasiTilangsTable extends Migration
             $table->date('tanggal_mulai');
             $table->date('tanggal_selesai');
             $table->string('lokasi');
+            $table->string('lat');
+            $table->string('lng');
             $table->string('keterangan');
             $table->softDeletes();
         });
