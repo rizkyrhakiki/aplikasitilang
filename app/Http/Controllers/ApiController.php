@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
-use Illuminate\Http\Request;
+
 
 class ApiController extends Controller
 {
@@ -11,7 +11,7 @@ class ApiController extends Controller
     {
         $client = new Client();
 
-        $response = $client->get('http://127.0.0.1:8000/dataInfoTilang');
+        $response = $client->request('GET','https://peaceful-tor-50926.herokuapp.com/public/dataInfoTilang');
         $responseBody = $response->getBody()->getContents();
 
         $apiResponse = json_decode($responseBody, true);
