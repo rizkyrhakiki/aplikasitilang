@@ -14,7 +14,7 @@
 ///*Route::get('/', function () {
 //    return view('welcome');
 //});*/
-Route::get('/', 'HomeController@index');
+Route::get('/', 'ApiController@index');
 
 Auth::routes();
 Route::middleware('auth')->group(function () {
@@ -24,4 +24,5 @@ Route::middleware('auth')->group(function () {
 //    Route::get('/admin', 'HomeController@index');
 });
 Route::resource('informasiTilangs', 'InformasiTilangController');
+
 Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');
