@@ -39,16 +39,18 @@
                 </div>
             </div>
             <div class="px-5 pb-5 flex-wrap flex">
-                @foreach($apiResponse['result'] as $informasiTilang)
+
+            @foreach($apiResponse['result'] as $informasiTilang)
+
                     <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
                         <a href="">
                             <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
                                  alt="Sunset in the mountains">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">{{$informasiTilang -> id}}</div>
-                                <p class="text-accent text-sm mb-3">{{$informasiTilang -> tanggal_mulai}} - {{$informasiTilang -> tanggal_selseai}}</p>
+                                <div class="font-bold text-xl mb-2">{{$informasiTilang['nama']}}</div>
+                                <p class="text-accent text-sm mb-3">{{$informasiTilang['tanggal_mulai']}} - {{$informasiTilang['tanggal_selesai']}}</p>
                                 <p class="text-gray-700 text-base">
-                                    {{$informasiTilang -> keterangan}}
+                                    {{$informasiTilang['keterangan']}}
                                 </p>
                             </div>
                         </a>
