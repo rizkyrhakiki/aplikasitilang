@@ -45,7 +45,7 @@
                             <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
                                  alt="Sunset in the mountains">
                             <div class="px-6 py-4">
-                                <div class="font-bold text-xl mb-2">{{$informasiTilang -> nama}}</div>
+                                <div class="font-bold text-xl mb-2">{{$informasiTilang -> id}}</div>
                                 <p class="text-accent text-sm mb-3">{{$informasiTilang -> tanggal_mulai}} - {{$informasiTilang -> tanggal_selseai}}</p>
                                 <p class="text-gray-700 text-base">
                                     {{$informasiTilang -> keterangan}}
