@@ -56,16 +56,18 @@ class InformasiTilangController extends AppBaseController
     }
 
     public function upload(){
-        $gambar = InformasiTilang::get();
-        return view('upload',['gambar' => $gambar]);
+        $file = InformasiTilang::get();
+
+        return view('upload',['file' => $file]);
     }
     public function proses_upload(Request $request){
         $this->validate($request, [
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048'
         /*    'keterangan' => 'required',*/
+
         ]);
 
-        // menyimpan data file yang diupload ke variabel $file
+        // menyimpan data file yang diupload ke variabel $fil
         $file = $request->file('file');
         $nama_file = time()."_".$file->getClientOriginalName();
 
@@ -89,7 +91,7 @@ class InformasiTilangController extends AppBaseController
         echo 'File Mime Type: '.$file->getMimeType();
 
         // isi dengan nama folder tempat kemana file diupload
-        $tujuan_upload = 'data_file';
+        $tujuan_upload = 'app/public/data_file';
         $file->move($tujuan_upload,$nama_file);
 
         InformasiTilang::create([

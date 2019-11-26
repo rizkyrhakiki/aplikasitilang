@@ -15,7 +15,7 @@
         @foreach($informasiTilangs as $informasiTilang)
             <tr>
                 {{--<td>{!! $informasiTilang->file !!}</td>--}}
-                <td><img width="150px" src="{{ url('/data_file/'.$informasiTilang->file) }}"></td>
+                <td><img width="150px" src="{{ url('app/public/data_file/'.$informasiTilang->file) }}"></td>
                 <td>{!! $informasiTilang->nama !!}</td>
                 <td>{!! $informasiTilang->tanggal_mulai !!}</td>
                 <td>{!! $informasiTilang->tanggal_selesai !!}</td>

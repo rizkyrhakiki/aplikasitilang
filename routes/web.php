@@ -1,4 +1,4 @@
-<?php
+     <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +26,5 @@ Route::middleware('auth')->group(function () {
 Route::resource('informasiTilangs', 'InformasiTilangController');
 
 Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');
+Route::post('/uploadfile', 'InformasiTilangController@proses_upload');
+Route::get('/uploadfile', 'InformasiTilangController@upload');

@@ -1,9 +1,10 @@
 <!-- Upload Field -->
-<div class="form-group row col-sm-48">
+<div class="form-group row col-sm-48" method="post" action="{{url('/informasiTilangs')}}">
+    {{csrf_field()}}
     {{--{!! Form::label('file', 'Gambar:',  ['class' => 'form-label col-lg-48']) !!}--}}
     {!! Form::file('file', null, ['class' => 'form-control col-lg-48']) !!}
 </div>
-
+{{--<img src="/data_file{{Session::get('path')}}"/>--}}
 @if(count($errors) > 0)
     <div class="alert alert-danger">
         @foreach ($errors->all() as $error)
