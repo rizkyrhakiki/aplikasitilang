@@ -43,7 +43,7 @@
             @foreach($apiResponse['result'] as $informasiTilang)
 
                     <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
-                        <a href="">
+                        <a href="/informasiTilang/{{$informasiTilang['id']}}">
                             <img class="w-full block pt-5" src="https://tailwindcss.com/img/card-top.jpg"
                                  alt="Sunset in the mountains">
                             <div class="px-6 py-4">

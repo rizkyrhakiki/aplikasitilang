@@ -6362,7 +6362,7 @@ S2.define('select2/selection/stopPropagation',[
         event.type = 'mousewheel';
 
         // Old school scrollwheel delta
-        if ( 'detail'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
+        if ( 'detail.blade.php'      in orgEvent ) { deltaY = orgEvent.detail * -1;      }
         if ( 'wheelDelta'  in orgEvent ) { deltaY = orgEvent.wheelDelta;       }
         if ( 'wheelDeltaY' in orgEvent ) { deltaY = orgEvent.wheelDeltaY;      }
         if ( 'wheelDeltaX' in orgEvent ) { deltaX = orgEvent.wheelDeltaX * -1; }
