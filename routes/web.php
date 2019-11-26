@@ -26,3 +26,5 @@ Route::middleware('auth')->group(function () {
 Route::resource('informasiTilangs', 'InformasiTilangController');
 
 Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');
+//Route::get('/detail/{id}', 'InformasiTilangController@detail');
+Route::get('/informasiTilang/{id}', 'InformasiTilangController@detail');

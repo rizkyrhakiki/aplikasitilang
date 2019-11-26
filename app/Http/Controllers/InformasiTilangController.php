@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateInformasiTilangRequest;
 use App\Models\InformasiTilang;
 use App\Repositories\InformasiTilangRepository;
 use App\Http\Controllers\AppBaseController;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Validator;
 use Flash;
@@ -101,9 +102,6 @@ class InformasiTilangController extends AppBaseController
         return redirect()->back();
     }
 
-
-
-
     /**
      * Store a newly created InformasiTilang in storage.
      *
@@ -116,7 +114,6 @@ class InformasiTilangController extends AppBaseController
         $input = $request->all();
 
         $informasiTilang = $this->informasiTilangRepository->create($input);
-
         Flash::success('Informasi Tilang saved successfully.');
 
         return redirect(route('informasiTilangs.index'));
@@ -139,7 +136,21 @@ class InformasiTilangController extends AppBaseController
             return redirect(route('informasiTilangs.index'));
         }
 
+
         return view('informasi_tilangs.show')->with('informasiTilang', $informasiTilang);
+    }
+
+    public function detail($id)
+    {
+        $informasiTilang = $this->informasiTilangRepository->find($id);
+
+        if (empty($informasiTilang)) {
+            Flash::error('Informasi Tilang not found');
+
+            return redirect(route('informasiTilangs.index'));
+        }
+        return view('detail')->with('informasiTilang', $informasiTilang);
+
     }
 
     /**

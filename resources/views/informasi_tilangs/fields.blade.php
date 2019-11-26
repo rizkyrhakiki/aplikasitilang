@@ -34,8 +34,8 @@
 
 @section('scripts')
     <script type="text/javascript">
-        $('#tanggal_mulai').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+        $('#tanggal_mulai').datepicker({
+            format: 'YYYY-MM-DD',
             useCurrent: false
         })
     </script>
@@ -43,8 +43,8 @@
 
 @section('scripts')
     <script type="text/javascript">
-        $('#tanggal_selesai').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+        $('#tanggal_selesai').datepicker({
+            format: 'YYYY-MM-DD',
             useCurrent: false
         })
     </script>
