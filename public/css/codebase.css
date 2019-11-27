@@ -10768,7 +10768,7 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   box-shadow: none;
 }
 #page-container.page-header-fixed #main-container {
-  padding-top: 68px;
+  padding-top: 8px;
 }
 #page-container.page-header-fixed #page-header, #page-container.page-header-glass #page-header {
   top: 0;

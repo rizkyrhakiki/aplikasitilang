@@ -26,10 +26,10 @@ Route::middleware('auth')->group(function () {
 Route::resource('informasiTilangs', 'InformasiTilangController');
 
 Route::get('/dataInfoTilang', 'InformasiTilangController@dataInfoTilang');
-<<<<<<< HEAD
+
 Route::post('/uploadfile', 'InformasiTilangController@proses_upload');
 Route::get('/uploadfile', 'InformasiTilangController@upload');
-=======
+
 //Route::get('/detail/{id}', 'InformasiTilangController@detail');
 Route::get('/informasiTilang/{id}', 'InformasiTilangController@detail');
->>>>>>> ba31085ed53e0903559474b2e5f8e112cc210ab8
+
