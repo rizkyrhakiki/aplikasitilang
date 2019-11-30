@@ -19,6 +19,7 @@ class CreateInformasiTilangsTable extends Migration
             $table->string('nama');
             $table->date('tanggal_mulai');
             $table->date('tanggal_selesai');
+            $table->increments('kotas)id');
             $table->string('lokasi');
             $table->string('lat');
             $table->string('lng');

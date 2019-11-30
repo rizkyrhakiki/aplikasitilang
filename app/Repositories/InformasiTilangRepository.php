@@ -20,6 +20,7 @@ class InformasiTilangRepository extends BaseRepository
         'nama',
         'tanggal_mulai',
         'tanggal_selesai',
+        'kotas_id',
         'lokasi',
         'keterangan'
     ];

@@ -34,7 +34,7 @@ class InformasiTilang extends Model
         'nama',
         'tanggal_mulai',
         'tanggal_selesai',
-        'kota',
+        'kotas_id',
         'lokasi',
         'lat',
         'lng',
@@ -52,7 +52,7 @@ class InformasiTilang extends Model
         'nama' => 'string',
         'tanggal_mulai' => 'date',
         'tanggal_selesai' => 'date',
-        'kota' => 'string',
+        'kotas_id'=> 'integer',
         'lokasi' => 'string',
         'lat' => 'string',
         'lng' => 'string',
@@ -69,6 +69,9 @@ class InformasiTilang extends Model
         'tanggal_selesai' => 'required|date|after:tanggal_mulai',*/
         'nama' => 'required',
     ];
-
+   public function Kota()
+    {
+        return $this->belongsTo(\App\Models\Kota::class, 'kotas_id');
+    }
     
 }

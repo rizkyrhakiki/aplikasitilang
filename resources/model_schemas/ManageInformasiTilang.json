@@ -48,10 +48,22 @@
         "inView": true
     },
     {
+        "name": "kota",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
         "name": "lokasi",
         "dbType": "string",
         "htmlType": "text",
-        "validations": "requiresd",
+        "validations": "required",
         "searchable": true,
         "fillable": true,
         "primary": false,

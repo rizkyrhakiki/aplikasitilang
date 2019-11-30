@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateInformasiTilangRequest;
 use App\Http\Requests\UpdateInformasiTilangRequest;
 use App\Models\InformasiTilang;
+use App\Models\Kota;
 use App\Repositories\InformasiTilangRepository;
 use App\Http\Controllers\AppBaseController;
 use GuzzleHttp\Client;
@@ -33,8 +34,9 @@ class InformasiTilangController extends AppBaseController
     public function index(Request $request)
     {
         $informasiTilangs = $this->informasiTilangRepository->all();
+        $kotas = Kota::all();
 
-        return view('informasi_tilangs.index')
+        return view('informasi_tilangs.index', compact('kotas'))
             ->with('informasiTilangs', $informasiTilangs);
     }
 
@@ -53,7 +55,13 @@ class InformasiTilangController extends AppBaseController
      */
     public function create()
     {
-        return view('informasi_tilangs.create');
+       $kotas = Kota::all()->pluck('name','id');
+        return view('informasi_tilangs.create', compact('kotas'));
+    }
+
+    public function kotas(){
+        $kotas = Kota::all();
+        return view('informasi_tilangs@create');
     }
 
     public function upload(){
@@ -165,6 +173,7 @@ class InformasiTilangController extends AppBaseController
     public function edit($id)
     {
         $informasiTilang = $this->informasiTilangRepository->find($id);
+        $kotas = Kota::all()->pluck('name','id');
 
         if (empty($informasiTilang)) {
             Flash::error('Informasi Tilang not found');
@@ -172,7 +181,7 @@ class InformasiTilangController extends AppBaseController
             return redirect(route('informasiTilangs.index'));
         }
 
-        return view('informasi_tilangs.edit')->with('informasiTilang', $informasiTilang);
+        return view('informasi_tilangs.edit')->with('informasiTilang', $informasiTilang, compact('kotas'));
     }
 
     /**

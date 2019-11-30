@@ -48,3 +48,7 @@
 </li>
 --}}
 
+<li class="{{ Request::is('kotas*') ? 'active' : '' }}">
+    <a href="{!! route('kotas.index') !!}"><i class="fa fa-edit"></i><span>Kotas</span></a>
+</li>
+
