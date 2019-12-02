@@ -45,6 +45,12 @@ class InformasiTilangController extends AppBaseController
         $dataTilang['result'] = $informasiTilangs;
         return response()->json($dataTilang);
     }
+    public function dataLokasi() {
+        $dataLokasi = InformasiTilang::select('lokasi')->get();
+        $dataTilang['title'] = 'Infromasi Lokasi Tilang';
+        $dataTilang['result'] = $dataLokasi;
+        return response()->json($dataLokasi);
+    }
 
     /**
      * Show the form for creating a new InformasiTilang.

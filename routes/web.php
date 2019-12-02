@@ -32,4 +32,5 @@ Route::get('/uploadfile', 'InformasiTilangController@upload');
 
 //Route::get('/detail/{id}', 'InformasiTilangController@detail');
 Route::get('/informasiTilang/{id}', 'InformasiTilangController@detail');
+Route::get('/dataLokasi', 'InformasiTilangController@dataLokasi');
 
