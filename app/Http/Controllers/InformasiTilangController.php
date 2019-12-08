@@ -60,11 +60,11 @@ class InformasiTilangController extends AppBaseController
      *
      * @return Response
      */
-//    public function create()
-//    {
-//     /*  $kotas = Kota::all()->pluck('name','id');*/
-//        return view('informasi_tilangs.create'/*, compact('kotas')*/);
-//    }
+    public function create()
+    {
+     /*  $kotas = Kota::all()->pluck('name','id');*/
+        return view('informasi_tilangs.create'/*, compact('kotas')*/);
+    }
 
 
 //    public function kotas(){
@@ -137,20 +137,20 @@ class InformasiTilangController extends AppBaseController
      */
     public function store(CreateInformasiTilangRequest $request)
     {
+//        if($request->hasFile('foto'))
+//        {
+            $img = $request->file('foto');
+            $fileName = uniqid() . '.' . $img->getClientOriginalName();
+//            $path = 'img';
+            Storage::disk('public')->putFileAs('img', $img, $fileName);
+//        }
         $input = $request->all();
 
-        if($request->hasFile('foto'))
-        {
-            $img = $request->file('foto');
-            $fileName = uniqid() . $img->getClientOriginalName();
-            $path = 'storage/img/';
-//            $fullPath = $path . $fileName;
-            Storage::disk('public')->putFileAs($path, $img, $fileName);
-        }
-//        $input['foto'] = $fullPath;
+
+
         InformasiTilang::create($input);
 
-        $informasiTilang = $this->informasiTilangRepository->create($input);
+//        $informasiTilang = $this->informasiTilangRepository->create($input);
         Flash::success('Informasi Tilang saved successfully.');
 
         return redirect(route('informasiTilangs.index'));

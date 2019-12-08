@@ -13,6 +13,9 @@
 
                 {{--{!! Form::label('file', 'Gambar:',  ['class' => 'form-label col-lg-48']) !!}--}}
                 {!! Form::file('foto', null, ['class' => 'form-control col-lg-48']) !!}
+{{--                <input type="file" name="foto"--}}
+{{--                       class="form-control-file text-primary font-weight-bold py-5"--}}
+{{--                       accept="image/*" onchange="readURL(this)" data-title="Drag and drop a file" formenctype="multipart/form-data">--}}
             </div>
             {{--<img src="/data_file{{Session::get('path')}}"/>--}}
 
