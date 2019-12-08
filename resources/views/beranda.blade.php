@@ -44,7 +44,7 @@
 
                         <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
                             <a href="/informasiTilang/{{$informasiTilang['id']}}">
-                                <img class="w-full block pt-5" src="{{asset('storage/'.$informasiTilang->foto)}}"
+                                <img class="w-full block pt-5" src="{{asset('storage/'.$informasiTilang-['foto'])}}"
                                      alt="Sunset in the mountains">
                                 <div class="px-6 py-4">
                                     <div class="font-bold text-xl mb-2">{{$informasiTilang['nama']}}</div>
