@@ -17,6 +17,7 @@ class InformasiTilangRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'foto',
         'nama',
         'tanggal_mulai',
         'tanggal_selesai',

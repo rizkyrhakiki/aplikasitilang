@@ -6,7 +6,7 @@
                 <th>Nama</th>
                 <th>Tanggal Mulai</th>
                 <th>Tanggal Selesai</th>
-                <th>Kota</th>
+               {{-- <th>Kota</th>--}}
                 <th>Lokasi</th>
                 <th>Keterangan</th>
                 <th colspan="3">Action</th>
@@ -16,11 +16,11 @@
         @foreach($informasiTilangs as $informasiTilang)
             <tr>
                 {{--<td>{!! $informasiTilang->file !!}</td>--}}
-                <td><img width="150px" src="{{ url('app/public/data_file/'.$informasiTilang->file) }}"></td>
+                <td><img src="{{ asset('storage/' . $informasiTilang->foto) }}" class="img-fluid" style="max-width: 60px" alt="{{ $informasiTilang->nama }}"></td>
                 <td>{!! $informasiTilang->nama !!}</td>
                 <td>{!! $informasiTilang->tanggal_mulai !!}</td>
                 <td>{!! $informasiTilang->tanggal_selesai !!}</td>
-                <td>{!! $informasiTilang->kota !!}</td>
+               {{-- <td>{!! $informasiTilang->kota !!}</td>--}}
                 <td>{!! $informasiTilang->lokasi !!}</td>
                 <td>{!! $informasiTilang->keterangan !!}</td>
                 <td>
