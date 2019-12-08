@@ -60,17 +60,17 @@ class InformasiTilangController extends AppBaseController
      *
      * @return Response
      */
-    public function create()
-    {
-     /*  $kotas = Kota::all()->pluck('name','id');*/
-        return view('informasi_tilangs.create'/*, compact('kotas')*/);
-    }
+//    public function create()
+//    {
+//     /*  $kotas = Kota::all()->pluck('name','id');*/
+//        return view('informasi_tilangs.create'/*, compact('kotas')*/);
+//    }
 
 
-   /* public function kotas(){
-        $kotas = Kota::all();
-        return view('informasi_tilangs@create');
-    }*/
+//    public function kotas(){
+//        $kotas = Kota::all();
+//        return view('informasi_tilangs@create');
+//    }
 
  /*   public function upload(){
         $file = InformasiTilang::get();
@@ -111,13 +111,13 @@ class InformasiTilangController extends AppBaseController
 //        echo 'File Mime Type: '.$file->getMimeType();
 
         // isi dengan nama folder tempat kemana file diupload
-<<<<<<< HEAD
-        $tujuan_upload = 'app/public/storage';
-        $file->move($tujuan_upload,$nama_file);
-=======
+
+//        $tujuan_upload = 'app/public/storage';
+//        $file->move($tujuan_upload,$nama_file);
+
 //        $tujuan_upload = 'storage/img';
 //        $file->move($tujuan_upload,$nama_file);
->>>>>>> c6ec4e4b224f2d0316890ec7e6251e69432a7ba2
+
 
 //        InformasiTilang::create([
 //            'file' => $nama_file,
