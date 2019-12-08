@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="px-5 pb-5 flex-wrap flex">
-                @if($apiResponse['result'] != null)
-                    @foreach($apiResponse['result'] as $informasiTilang)
+                @if($infoTilang!= null)
+                    @foreach($infoTilang as $informasiTilang)
 
                         <div class="p-5 md:w-1/2 lg:w-1/3 rounded overflow-hidden shadow-lg">
                             <a href="public/informasiTilang/{{$informasiTilang['id']}}">
-                                <img class="w-full block pt-5" src="{{asset('storage/'.$informasiTilang['foto'])}}"
+                                <img class="w-full h-56 block pt-5" src="{{asset('storage/'.$informasiTilang['foto'])}}"
                                      alt="Sunset in the mountains">
                                 <div class="px-6 py-4">
                                     <div class="font-bold text-xl mb-2">{{$informasiTilang['nama']}}</div>
