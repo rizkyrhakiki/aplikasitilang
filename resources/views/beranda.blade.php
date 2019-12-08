@@ -6,7 +6,7 @@
         <div class="mt-10 mr-auto ml-auto max-w-5xl object-cover h-75 rounded-lg items-center overflow-hidden ">
             <div class="shadow-lg">
                 <img class="w-full h-64items-center"
-                     src="https://designertask.com/wp-content/uploads/2018/05/soundcloud-banner-size.png"
+                     src="https://i.ytimg.com/vi/s8T9t1gQf8w/maxresdefault.jpg"
                      alt="Sunset in the mountains">
             </div>
         </div>

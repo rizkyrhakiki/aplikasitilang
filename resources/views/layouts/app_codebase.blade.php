@@ -12,7 +12,7 @@
 
     <!-- Icons -->
 
-    <link rel="shortcut icon" href="{{ asset('media/favicons/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('storage/img/logo.png') }}">
     <link rel="icon" sizes="192x192" ><div class="content-header-section">
         {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
             {{--Recomendation--}}
@@ -23,8 +23,8 @@
         {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
             {{--Master--}}
         {{--</button>--}}
-    </div>ype="image/png" href="{{ asset('media/favicons/favicon-192x192.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/apple-touch-icon-180x180.png') }}">
+    </div>type="image/png" href="{{ asset('media/favicons/favicon-192x192.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('storage/img/logo.png') }}">
 
     <!-- Fonts and Styles -->
     @yield('css_before')
@@ -70,7 +70,7 @@
                     <div class="content-header-item">
                         <a class="link-effect font-w700" href="index.html">
                             <i class="si si-fire text-primary"></i>
-                            <span class="font-size-xl text-dual-primary-dark">Aplikasi</span><span class="font-size-xl text-primary">Tilang</span>
+                            <span class="font-size-xl text-dual-primary-dark" src="/storage/img/logo.png">Aplikasi</span><span class="font-size-xl text-primary">Tilang</span>
                         </a>
                     </div>
                     <!-- END Logo -->
