@@ -10,6 +10,7 @@ use App\Repositories\InformasiTilangRepository;
 use App\Http\Controllers\AppBaseController;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Validator;
 use Flash;
 use Response;
@@ -34,9 +35,9 @@ class InformasiTilangController extends AppBaseController
     public function index(Request $request)
     {
         $informasiTilangs = $this->informasiTilangRepository->all();
-        $kotas = Kota::all();
+       /* $kotas = Kota::all();*/
 
-        return view('informasi_tilangs.index', compact('kotas'))
+        return view('informasi_tilangs.index'/*, compact('kotas')*/)
             ->with('informasiTilangs', $informasiTilangs);
     }
 
@@ -61,62 +62,71 @@ class InformasiTilangController extends AppBaseController
      */
     public function create()
     {
-       $kotas = Kota::all()->pluck('name','id');
-        return view('informasi_tilangs.create', compact('kotas'));
+     /*  $kotas = Kota::all()->pluck('name','id');*/
+        return view('informasi_tilangs.create'/*, compact('kotas')*/);
     }
 
-    public function kotas(){
+
+   /* public function kotas(){
         $kotas = Kota::all();
         return view('informasi_tilangs@create');
-    }
+    }*/
 
-    public function upload(){
+ /*   public function upload(){
         $file = InformasiTilang::get();
 
         return view('upload',['file' => $file]);
     }
-    public function proses_upload(Request $request){
+    public function proses_upload(Request $request, $informasiTilang){
         $this->validate($request, [
             'file' => 'required|file|image|mimes:jpeg,png,jpg|max:10000'
         /*    'keterangan' => 'required',*/
 
-        ]);
+//        ]);
 
         // menyimpan data file yang diupload ke variabel $fil
-        $file = $request->file('file');
-        $nama_file = time()."_".$file->getClientOriginalName();
+//        $file = $request->file('file')->store('public');
+    /*    $file = File::make(Storage::get($filePath))->resize(320,240)->encode();
+        Storage::put($filePath,$file);
+        $informasiTilang->file=$filePath;*/
+//        $nama_file = time()."_".$file->getClientOriginalName();
 
         // nama file
-        echo 'File Name: '.$file->getClientOriginalName();
-        echo '<br>';
+//        echo 'File Name: '.$file->getClientOriginalName();
+//        echo '<br>';
 
         // ekstensi file
-        echo 'File Extension: '.$file->getClientOriginalExtension();
-        echo '<br>';
+//        echo 'File Extension: '.$file->getClientOriginalExtension();
+//        echo '<br>';
 
         // real path
-        echo 'File Real Path: '.$file->getRealPath();
-        echo '<br>';
+//        echo 'File Real Path: '.$file->getRealPath();
+//        echo '<br>';
 
         // ukuran file
-        echo 'File Size: '.$file->getSize();
-        echo '<br>';
+//        echo 'File Size: '.$file->getSize();
+//        echo '<br>';
 
         // tipe mime
-        echo 'File Mime Type: '.$file->getMimeType();
+//        echo 'File Mime Type: '.$file->getMimeType();
 
         // isi dengan nama folder tempat kemana file diupload
+<<<<<<< HEAD
         $tujuan_upload = 'app/public/storage';
         $file->move($tujuan_upload,$nama_file);
+=======
+//        $tujuan_upload = 'storage/img';
+//        $file->move($tujuan_upload,$nama_file);
+>>>>>>> c6ec4e4b224f2d0316890ec7e6251e69432a7ba2
 
-        InformasiTilang::create([
-            'file' => $nama_file,
+//        InformasiTilang::create([
+//            'file' => $nama_file,
            /* 'keterangan' => $request->keterangan,*/
-        ]);
+//        ]);
         // upload file
 //        $file->move($tujuan_upload,$file->getClientOriginalName());
-        return redirect()->back();
-    }
+//        return redirect()->back();
+//    }*/
 
     /**
      * Store a newly created InformasiTilang in storage.
@@ -129,10 +139,37 @@ class InformasiTilangController extends AppBaseController
     {
         $input = $request->all();
 
+        if($request->hasFile('foto'))
+        {
+            $img = $request->file('foto');
+            $fileName = uniqid() . $img->getClientOriginalName();
+            $path = 'storage/img/';
+//            $fullPath = $path . $fileName;
+            Storage::disk('public')->putFileAs($path, $img, $fileName);
+        }
+//        $input['foto'] = $fullPath;
+        InformasiTilang::create($input);
+
         $informasiTilang = $this->informasiTilangRepository->create($input);
         Flash::success('Informasi Tilang saved successfully.');
 
         return redirect(route('informasiTilangs.index'));
+    }
+
+    public function simpan(Request $request)
+    {
+        $input = $request->all();
+        if($request->hasFile('foto'))
+        {
+            $img = $request->file('foto');
+            $fileName = uniqid() . $img->getClientOriginalName();
+            $path = 'storage/img/';
+            $fullPath = $path . $fileName;
+            Storage::disk('public')->putFileAs($path, $img, $fileName);
+        }
+        $input['foto'] = $fullPath;
+        InformasiTilang::create($input);
+        return redirect(route('index'));
     }
 
     /**
@@ -179,7 +216,7 @@ class InformasiTilangController extends AppBaseController
     public function edit($id)
     {
         $informasiTilang = $this->informasiTilangRepository->find($id);
-        $kotas = Kota::all()->pluck('name','id');
+        /*$kotas = Kota::all()->pluck('name','id');*/
 
         if (empty($informasiTilang)) {
             Flash::error('Informasi Tilang not found');
@@ -187,7 +224,7 @@ class InformasiTilangController extends AppBaseController
             return redirect(route('informasiTilangs.index'));
         }
 
-        return view('informasi_tilangs.edit')->with('informasiTilang', $informasiTilang, compact('kotas'));
+        return view('informasi_tilangs.edit')->with('informasiTilang', $informasiTilang/*, compact('kotas')*/);
     }
 
     /**
@@ -200,7 +237,23 @@ class InformasiTilangController extends AppBaseController
      */
     public function update($id, UpdateInformasiTilangRequest $request)
     {
+        $input = $request->all();
+
         $informasiTilang = $this->informasiTilangRepository->find($id);
+
+        if($request->hasFile('foto'))
+        {
+            $img = $request->file('foto');
+            $fileName = uniqid() . $img->getClientOriginalName();
+            $path = 'storage/img/';
+//            $fullPath = $path . $fileName;
+            Storage::disk('public')->putFileAs($path, $img, $fileName);
+            if($informasiTilang->foto) {
+                Storage::disk('public')->delete($informasiTilang->foto);
+            }
+//            $input['foto'] = $fullPath;
+        }
+        $informasiTilang->update($input);
 
         if (empty($informasiTilang)) {
             Flash::error('Informasi Tilang not found');
@@ -227,7 +280,9 @@ class InformasiTilangController extends AppBaseController
     public function destroy($id)
     {
         $informasiTilang = $this->informasiTilangRepository->find($id);
-
+        if($informasiTilang->foto) {
+            Storage::disk('public')->delete($informasiTilang->foto);
+        }
         if (empty($informasiTilang)) {
             Flash::error('Informasi Tilang not found');
 

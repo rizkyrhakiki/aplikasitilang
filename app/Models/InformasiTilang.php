@@ -30,7 +30,7 @@ class InformasiTilang extends Model
 
 
     public $fillable = [
-        'file',
+        'foto',
         'nama',
         'tanggal_mulai',
         'tanggal_selesai',
@@ -48,7 +48,7 @@ class InformasiTilang extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'file' => 'file',
+        'foto' => 'file',
         'nama' => 'string',
         'tanggal_mulai' => 'date',
         'tanggal_selesai' => 'date',
@@ -69,9 +69,9 @@ class InformasiTilang extends Model
         'tanggal_selesai' => 'required|date|after:tanggal_mulai',*/
         'nama' => 'required',
     ];
-   public function Kota()
-    {
-        return $this->belongsTo(\App\Models\Kota::class, 'kotas_id');
-    }
+//   public function Kota()
+//    {
+//        return $this->belongsTo(\App\Models\Kota::class, 'kotas_id');
+//    }
     
 }

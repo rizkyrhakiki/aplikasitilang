@@ -15,16 +15,17 @@ class CreateInformasiTilangsTable extends Migration
     {
         Schema::create('informasi_tilangs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('file');
+            $table->string('foto');
             $table->string('nama');
             $table->date('tanggal_mulai');
             $table->date('tanggal_selesai');
-            $table->increments('kotas)id');
             $table->string('lokasi');
             $table->string('lat');
             $table->string('lng');
             $table->string('keterangan');
             $table->softDeletes();
+            $table->timestamps();
+
         });
     }
 
