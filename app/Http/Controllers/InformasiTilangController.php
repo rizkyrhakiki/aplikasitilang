@@ -137,13 +137,13 @@ class InformasiTilangController extends AppBaseController
      */
     public function store(CreateInformasiTilangRequest $request)
     {
-//        if($request->hasFile('foto'))
-//        {
+        if($request->hasFile('foto'))
+        {
             $img = $request->file('foto');
             $fileName = uniqid() . '.' . $img->getClientOriginalName();
 //            $path = 'img';
             Storage::disk('public')->putFileAs('img', $img, $fileName);
-//        }
+        }
         $input = $request->all();
 
 
