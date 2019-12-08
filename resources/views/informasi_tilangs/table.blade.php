@@ -4,10 +4,11 @@
             <tr>
                 <th>Gambar</th>
                 <th>Nama</th>
-        <th>Tanggal Mulai</th>
-        <th>Tanggal Selesai</th>
-        <th>Lokasi</th>
-        <th>Keterangan</th>
+                <th>Tanggal Mulai</th>
+                <th>Tanggal Selesai</th>
+                <th>Kota</th>
+                <th>Lokasi</th>
+                <th>Keterangan</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
@@ -19,6 +20,7 @@
                 <td>{!! $informasiTilang->nama !!}</td>
                 <td>{!! $informasiTilang->tanggal_mulai !!}</td>
                 <td>{!! $informasiTilang->tanggal_selesai !!}</td>
+                <td>{!! $informasiTilang->kota !!}</td>
                 <td>{!! $informasiTilang->lokasi !!}</td>
                 <td>{!! $informasiTilang->keterangan !!}</td>
                 <td>

@@ -66,6 +66,13 @@
                 {{--{!! Form::date('tanggal_selesai', null, ['class' => 'form-control']) !!}--}}
             {{--</div>--}}
 
+            <!-- Kota Field -->
+            <div class="form-group row col-sm-48 font-size-lg text-black mb-5">
+                {!! Form::label('kota', 'Kota:',  ['class' => 'form-label col-lg-48']) !!}
+                <br>
+                {!! Form::select('kotas_id',$kotas , ['class' => 'form-control col-lg-48']) !!}
+            </div>
+
             <!-- Lokasi Field -->
             <div class="form-group row col-sm-48 font-size-lg text-black mb-5">
                 {!! Form::label('lokasi', 'Lokasi:',  ['class' => 'form-label col-lg-48']) !!}
@@ -82,8 +89,6 @@
                 {!! Form::label('lng', 'Lng:',  ['class' => 'form-label col-lg-48']) !!}
                 {!! Form::text('lng', null, ['class' => 'form-control col-lg-48']) !!}
             </div>
-
-
 
             <!-- Keterangan Field -->
             <div class="form-group row col-sm-48 font-size-lg text-black mb-5">

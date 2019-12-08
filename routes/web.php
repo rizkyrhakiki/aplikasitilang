@@ -34,3 +34,6 @@ Route::get('/uploadfile', 'InformasiTilangController@upload');
 Route::get('/informasiTilang/{id}', 'InformasiTilangController@detail');
 Route::get('/dataLokasi', 'InformasiTilangController@dataLokasi');
 
+
+
+Route::resource('kotas', 'KotaController');
