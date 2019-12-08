@@ -6,6 +6,11 @@
 
         <div id="faq1_q1" class="collapse show" role="tabpanel" aria-labelledby="faq1_h1" data-parent="#faq1">
             <div class="block-content border-t">
+                <!-- Foto Field -->
+                <div class="form-group font-size-lg text-black mb-5">
+                    {!! Form::label('foto', 'Foto:') !!}
+                    <p><img src="{{ asset('storage/' . $informasiTilang->foto) }}" class="img-fluid" style="max-width: 60px" alt="{{ $informasiTilang->nama }}"></p> <br>
+                </div>
                 <!-- Nama Field -->
                 <div class="form-group font-size-lg text-black mb-5">
                     {!! Form::label('nama', 'Nama:') !!}

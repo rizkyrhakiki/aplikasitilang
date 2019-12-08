@@ -14,15 +14,15 @@
 
     <link rel="shortcut icon" href="{{ asset('media/favicons/favicon.png') }}">
     <link rel="icon" sizes="192x192" ><div class="content-header-section">
-        <button type="button" class="btn btn-secondary btn-noborder">
-            Recomendation
-        </button>
+        {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
+            {{--Recomendation--}}
+        {{--</button>--}}
         <button type="button" class="btn btn-secondary btn-noborder">
             Assessment
         </button>
-        <button type="button" class="btn btn-secondary btn-noborder">
-            Master
-        </button>
+        {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
+            {{--Master--}}
+        {{--</button>--}}
     </div>ype="image/png" href="{{ asset('media/favicons/favicon-192x192.png') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('media/favicons/apple-touch-icon-180x180.png') }}">
 
@@ -109,11 +109,11 @@
             <!-- Center Section -->
             <div class="content-header-section">
                 <button type="button" class="btn btn-secondary btn-noborder">
-                    HOME
+                       HOME
                 </button>
-                <button type="button" class="btn btn-secondary btn-noborder">
-                    MASTER
-                </button>
+                {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
+                    {{--MASTER--}}
+                {{--</button>--}}
                 {{--<button type="button" class="btn btn-secondary btn-noborder">--}}
                 {{--Master--}}
                 {{--</button>--}}
