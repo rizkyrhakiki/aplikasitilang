@@ -13,7 +13,7 @@
     {{--    <div class="box box-primary">--}}
             <div class="box-body">
     {{--            <div class="row">--}}
-                    {!! Form::open(['route' => 'informasiTilangs.store']) !!}
+                    {!! Form::open(['route' => 'informasiTilangs.store', 'method' => 'post', 'files' => true]) !!}
 
                         @include('informasi_tilangs.fields')
 
